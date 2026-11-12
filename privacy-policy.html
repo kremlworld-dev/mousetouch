@@ -32,7 +32,8 @@ data. The app has no internet access: nothing it handles ever leaves your device
 <h2>What Mouse Touch does</h2>
 <p>Mouse Touch turns mouse clicks and drags into touch taps and swipes on the screen under the
 cursor (the phone's screen, an external monitor, or Samsung DeX), so games and apps that ignore
-a mouse respond to it. A right-click acts as Back.</p>
+a mouse respond to it. The scroll wheel performs a pinch-to-zoom gesture, and a right-click acts
+as Back.</p>
 
 <h2>Use of the Accessibility Service API</h2>
 <p>To provide this feature, Mouse Touch uses Android's Accessibility Service API. Mouse Touch is
@@ -42,10 +43,11 @@ disclosure explaining this and asks for your explicit consent. If the service is
 without that consent, it stays inactive.</p>
 <p>Through the Accessibility Service API, Mouse Touch:</p>
 <ul>
-  <li><strong>Receives mouse input</strong> (button presses, cursor position and movement) while
+  <li><strong>Receives mouse input</strong> (button presses, scroll-wheel movement, cursor position
+      and movement) while
       it is active. When you pause it, it stops receiving mouse input and the mouse works normally.</li>
-  <li><strong>Performs gestures</strong> (taps and swipes at the cursor position, and the Back
-      action for right-clicks) on your behalf.</li>
+  <li><strong>Performs gestures</strong> (taps, swipes and two-finger pinch-to-zoom gestures at
+      the cursor position, and the Back action for right-clicks) on your behalf.</li>
 </ul>
 <p>Mouse Touch also reads basic <strong>display information</strong> (which screens are connected
 and their sizes) through standard Android APIs, so taps go to the screen the cursor is on.</p>
